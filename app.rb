@@ -1,5 +1,6 @@
 class App < Sinatra::Base
   get "/" do
+    @images = Image.all
     haml :index
   end
 

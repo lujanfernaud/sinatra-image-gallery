@@ -1,3 +1,10 @@
+%h1 All images
+
+- @images.each do |image|
+  %li
+    %h2= image.title
+    %img{src: image.file, width: "100%"}
+
 %h1 Upload new image
 
 %form(action="/images" method="post" enctype="multipart/form-data")
