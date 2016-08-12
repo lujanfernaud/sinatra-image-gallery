@@ -1,5 +1,11 @@
 class App < Sinatra::Base
   get "/" do
-    "Hello Image Gallery!"
+    haml :index
+  end
+
+  post "/images" do
+    @image = Image.new params[:image]
+    @image.save
+    redirect "/"
   end
 end
