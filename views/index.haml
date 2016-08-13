@@ -1,10 +1,10 @@
-%h1 All images
+.text-center
+  %h1 Simple Image Gallery
 
 .row
   %ul.list-unstyled
     - @images.each do |image|
       %li.col-md-4
-        %h2= image.title
         %a{href: image.file, data: { lightbox: "gallery", title: image.title } }
           %img{src: image.file.url(:small), width: "100%"}
         %a{href: "/images/#{image.id}/delete-confirmation"}
