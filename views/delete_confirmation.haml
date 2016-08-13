@@ -1,0 +1,7 @@
+%h2 Are you sure you want to delete this image?
+
+%img{src: @image.file, width: "100%"}
+
+%h2
+  %a{href: "/images/#{@image.id}/delete"}
+    Yes, Delete

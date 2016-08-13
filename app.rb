@@ -15,6 +15,11 @@ class App < Sinatra::Base
     redirect "/"
   end
 
+  get "/images/:id/delete-confirmation" do
+    @image = Image[params[:id]]
+    haml :delete_confirmation
+  end
+
   get "/images/:id/delete" do
     @image = Image[params[:id]]
     @image.destroy
