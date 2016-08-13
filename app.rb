@@ -14,4 +14,10 @@ class App < Sinatra::Base
     @image.save
     redirect "/"
   end
+
+  get "/images/:id/delete" do
+    @image = Image[params[:id]]
+    @image.destroy
+    redirect "/"
+  end
 end
