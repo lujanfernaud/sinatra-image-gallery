@@ -11,3 +11,18 @@
   margin-top: 30px;
   margin-bottom: 60px;
 }
+
+.delete-button {
+  width: 100%;
+  height: 30px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  background-color: #337ab7;
+  font-weight: 400;
+  vertical-align: middle;
+}
+
+.delete-button a, .delete-button a:hover {
+  color: #fff;
+  text-decoration: none;
+}
