@@ -1,16 +1,18 @@
 .text-center
-  %h1 Simple Image Gallery
+  .header-margin
+    %h1 Simple Image Gallery
 
 .row
   %ul.list-unstyled
     - @images.each do |image|
       %li.col-md-4
-        %a{href: image.file, data: { lightbox: "gallery", title: image.title } }
-          %img{src: image.file.url(:small), width: "100%"}
-        - if loggedin?
-          .text-center
-            %a{href: "/images/#{image.id}/delete-confirmation"}
-              Delete
+        .voffset
+          %a{href: image.file, data: { lightbox: "gallery", title: image.title } }
+            %img{src: image.file.url(:small), width: "100%"}
+          - if loggedin?
+            .text-center
+              %a{href: "/images/#{image.id}/delete-confirmation"}
+                Delete
 
 - if loggedin? 
   %h1 Upload new image
