@@ -56,6 +56,9 @@ class App < Sinatra::Base
   # Update image information in the database.
   post "/images/:id/edit" do
     @image = Image[params[:id]]
+    if params["image-file"] != ""
+      @image.update(:file => params["image-file"])
+    end
     if params["image-title"] != ""
       @image.update(:title => params["image-title"])
     end
