@@ -1,0 +1,18 @@
+.text-center
+  %h2 Edit image
+
+%img{src: @image.file, width: "100%"}
+
+.text-center
+  %h2= @image.title
+
+.upload-margin
+  %form(action="/images/#{@image.id}/edit" method="post" enctype="multipart/form-data")
+    %p
+      %input(type="file" name="image-file" id="file")
+
+    %p
+      %input(type="text" name="image-title" class="form-control" placeholder="#{@image.title}")
+
+    %p
+      %button(class="btn btn-primary") Update!

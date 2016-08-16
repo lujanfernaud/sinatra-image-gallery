@@ -47,6 +47,19 @@ class App < Sinatra::Base
     redirect "/"
   end
 
+  # Show edit template.
+  get "/images/:id/edit" do
+    @image = Image[params[:id]]
+    haml :edit
+  end
+
+  # Update image information in the database.
+  post "/images/:id/edit" do
+    @image = Image[params[:id]]
+    @image.update(:title => params['image-title'])
+    redirect "/"
+  end
+
   # Delete confirmation.
   get "/images/:id/delete-confirmation" do
     @image = Image[params[:id]]

@@ -10,10 +10,12 @@
           %a{href: image.file, data: { lightbox: "gallery", title: image.title } }
             %img{src: image.file.url(:small), width: "100%"}
           - if loggedin?
-            .delete-button              
-              %a{href: "/images/#{image.id}/delete-confirmation"}
-                .text-center
-                  Delete
+            %a{href: "/images/#{image.id}/edit"}
+              .edit-del-button
+                Edit
+            %a{href: "/images/#{image.id}/delete-confirmation"}             
+              .edit-del-button     
+                Delete
 
 - if loggedin? 
   .upload-margin
