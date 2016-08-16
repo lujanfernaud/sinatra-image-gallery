@@ -1,10 +1,12 @@
-.text-center
-  %h2 Edit image
+.header-margin
+  .text-center
+    %h1 Edit Image
 
 %img{src: @image.file, width: "100%"}
 
-.text-center
-  %h2= @image.title
+.margin-top-bottom
+  .text-center
+    %h2= @image.title
 
 .upload-margin
   %form(action="/images/#{@image.id}/edit" method="post" enctype="multipart/form-data")
