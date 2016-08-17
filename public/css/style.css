@@ -29,11 +29,11 @@
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  border: 1px solid transparent;
+  cursor: pointer;
+  border: 1px solid #2e6da4;
   border-radius: 4px;
 }
 
-.edit-del-button a, .edit-del-button a:hover {
-  color: #fff;
-  text-decoration: none;
+.edit-del-button:hover {
+  background-color: #286090;
 }

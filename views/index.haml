@@ -11,10 +11,10 @@
             %img{src: image.file.url(:small), width: "100%"}
           - if loggedin?
             %a{href: "/images/#{image.id}/edit"}
-              .edit-del-button
+              %button(class="edit-del-button")
                 Edit
             %a{href: "/images/#{image.id}/delete-confirmation"}             
-              .edit-del-button     
+              %button(class="edit-del-button")
                 Delete
 
 - if loggedin? 
