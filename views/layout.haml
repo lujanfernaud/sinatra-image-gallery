@@ -6,7 +6,15 @@
     %link(rel="stylesheet" href="/css/bootstrap.min.css")
     %link(rel="stylesheet" href="/css/lightbox.css")
     %script(src="/js/jquery-3.1.0.min.js")
+    %script(src="/js/masonry.pkgd.min.js")
     %script(src="/js/bootstrap.min.js")
+    :javascript
+      $(document).ready(function() {
+        $('ul.list-unstyled').masonry({
+          itemSelector: 'li.col-md-4',
+          columnWidth: 'li.col-md-4'
+        });
+      });
 
   %body
     .container
