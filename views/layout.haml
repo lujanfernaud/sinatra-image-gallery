@@ -6,13 +6,18 @@
     %link(rel="stylesheet" href="/css/bootstrap.min.css")
     %link(rel="stylesheet" href="/css/lightbox.css")
     %script(src="/js/jquery-3.1.0.min.js")
-    %script(src="/js/masonry.pkgd.min.js")
     %script(src="/js/bootstrap.min.js")
+    %script(src="/js/masonry.pkgd.min.js")
+    %script(src="/js/imagesloaded.pkgd.min.js")
     :javascript
       $(window).on('load', function() {
-        $('ul.list-unstyled').masonry({
-          itemSelector: 'li.col-md-4',
-          columnWidth: 'li.col-md-4'
+        var $grid = $('ul.list-unstyled').imagesLoaded(function() {
+          // Init Masonry after all images have loaded.
+          $grid.masonry({
+            itemSelector: 'li.col-md-4',
+            columnWidth: 'li.col-md-4',
+            percentPosition: true
+          });
         });
       });
 
