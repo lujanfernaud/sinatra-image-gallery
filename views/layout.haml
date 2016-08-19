@@ -9,7 +9,7 @@
     %script(src="/js/masonry.pkgd.min.js")
     %script(src="/js/bootstrap.min.js")
     :javascript
-      $(document).ready(function() {
+      $(window).on('load', function() {
         $('ul.list-unstyled').masonry({
           itemSelector: 'li.col-md-4',
           columnWidth: 'li.col-md-4'
