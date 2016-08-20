@@ -10,12 +10,12 @@
     %script(src="/js/masonry.pkgd.min.js")
     %script(src="/js/imagesloaded.pkgd.min.js")
     :javascript
-      $(window).on('load', function() {
-        var $grid = $('ul.list-unstyled').imagesLoaded(function() {
+      $(document).ready(function() {
+        var $grid = $('.grid').imagesLoaded(function() {
           // Init Masonry after all images have loaded.
           $grid.masonry({
-            itemSelector: 'li.col-md-4',
-            columnWidth: 'li.col-md-4',
+            itemSelector:   '.grid-item',
+            columnWidth:    '.grid-item',
             percentPosition: true
           });
         });
