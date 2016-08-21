@@ -3,19 +3,20 @@
     %h1 Simple Image Gallery
 
 .row
-  %ul.grid.list-unstyled
-    - @images.each do |image|
-      %li.grid-item.col-md-4
-        .margin-bottom-30
-          %a{href: image.file, data: { lightbox: "gallery", title: image.title } }
-            %img{src: image.file.url(:small), class: "img-responsive"}
-          - if loggedin?
-            %a{href: "/images/#{image.id}/edit"}
-              %button(class="edit-del-button")
-                Edit
-            %a{href: "/images/#{image.id}/delete-confirmation"}             
-              %button(class="edit-del-button")
-                Delete
+  #links
+    %ul.grid.list-unstyled
+      - @images.each do |image|
+        %li.grid-item.col-md-4
+          .margin-bottom-30
+            %a(href= "#{image.file}" data-gallery)
+              %img{src: image.file.url(:small), class: "img-responsive"}
+            - if loggedin?
+              %a{href: "/images/#{image.id}/edit"}
+                %button(class="edit-del-button")
+                  Edit
+              %a{href: "/images/#{image.id}/delete-confirmation"}             
+                %button(class="edit-del-button")
+                  Delete
 
 - if loggedin? 
   .upload-margin
