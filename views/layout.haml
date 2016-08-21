@@ -4,23 +4,9 @@
     %meta(charset="utf-8")
     %link(rel="stylesheet" href="/css/bootstrap.min.css")
     %link(rel="stylesheet" href="/css/style.css")
+    / Blueimp's Bootstrap Image Gallery.
     %link(rel="stylesheet" href="/css/blueimp-gallery.min.css")
     %link(rel="stylesheet" href="/css/bootstrap-image-gallery.min.css")
-    %script(src="/js/jquery-3.1.0.min.js")
-    %script(src="/js/bootstrap.min.js")
-    %script(src="/js/masonry.pkgd.min.js")
-    %script(src="/js/imagesloaded.pkgd.min.js")
-    :javascript
-      $(document).ready(function() {
-        var $grid = $('.grid').imagesLoaded(function() {
-          // Init Masonry after all images have loaded.
-          $grid.masonry({
-            itemSelector:   '.grid-item',
-            columnWidth:    '.grid-item',
-            percentPosition: true
-          });
-        });
-      });
 
   %body
     .container
@@ -53,5 +39,22 @@
                 Next
                 %i.glyphicon.glyphicon-chevron-right
 
+    %script(src="/js/jquery-3.1.0.min.js")
+    %script(src="/js/bootstrap.min.js")
+    / Masonry.
+    %script(src="/js/masonry.pkgd.min.js")
+    %script(src="/js/imagesloaded.pkgd.min.js")
+    :javascript
+      $(document).ready(function() {
+        var $grid = $('.grid').imagesLoaded(function() {
+          // Init Masonry after all images have loaded.
+          $grid.masonry({
+            itemSelector:   '.grid-item',
+            columnWidth:    '.grid-item',
+            percentPosition: true
+          });
+        });
+      });
+    / Blueimp's Bootstrap Image Gallery.
     %script(src="/js/jquery.blueimp-gallery.min.js")
     / %script(src="/js/bootstrap-image-gallery.min.js")
