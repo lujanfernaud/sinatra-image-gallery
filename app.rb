@@ -42,8 +42,11 @@ class App < Sinatra::Base
 
   # Save image to database.
   post "/images" do
-    @image = Image.new params[:image]
-    @image.save
+    @image_params = params[:image]
+    if @image_params["file"][:filename] =~ /^.*\.(jpg)$/
+      @image = Image.new params[:image]
+      @image.save
+    end
     redirect "/"
   end
 
