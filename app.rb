@@ -18,7 +18,7 @@ class App < Sinatra::Base
 
   # Index.
   get "/" do
-    @images = Image.all
+    @images = Image.all.reverse
     haml :index
   end
 
