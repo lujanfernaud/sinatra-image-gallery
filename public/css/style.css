@@ -39,5 +39,6 @@ body {
 }
 
 .edit-del-button:hover {
+  color: #fff;
   background-color: #286090;
 }
