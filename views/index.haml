@@ -2,6 +2,12 @@
   .text-center
     %h1 Simple Image Gallery
 
+- if loggedin?
+  .header-margin
+    .text-center
+      %a(href="/upload" class="btn btn-primary")
+        Upload New Image
+
 .row
   #links
     %ul.grid.list-unstyled
@@ -17,17 +23,3 @@
               %a{href: "/images/#{image.id}/delete-confirmation"}             
                 %button(class="edit-del-button")
                   Delete
-
-- if loggedin? 
-  .upload-margin
-    %h1 Upload new image
-
-    %form(action="/images" method="post" enctype="multipart/form-data")
-      %p
-        %input(type="file" name="image[file]" id="file")
-
-      %p
-        %input(type="text" name="image[title]" class="form-control" placeholder="Enter a title for the image.")
-
-      %p
-        %button(class="btn btn-primary") Upload!

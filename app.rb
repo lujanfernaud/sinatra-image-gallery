@@ -40,6 +40,11 @@ class App < Sinatra::Base
     haml :show
   end
 
+  # Upload images.
+  get "/upload" do
+    haml :upload
+  end
+
   # Save image to database.
   post "/images" do
     @image_params = params[:image]
