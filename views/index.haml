@@ -5,7 +5,7 @@
 - if loggedin?
   .header-margin
     .text-center
-      %a(href="/upload" class="btn btn-primary")
+      %button(type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-upload")
         Upload New Image
 
 .row
@@ -21,3 +21,21 @@
                 Edit
               %a{href: "/images/#{image.id}/delete-confirmation", class: "btn edit-del-button"}             
                 Delete
+
+%div(class="modal fade" id="modal-upload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+  %div(class="modal-dialog modal-lg" role="document")
+    .modal-content
+      .modal-header
+        %button(type="button" class="close" data-dismiss="modal" aria-label="close")
+          %span(aria-hidden="true") &times;
+        %h4(class="modal-title" id="myModalLabel") Upload New Image
+      .modal-body
+        %form(action="/images" method="post" enctype="multipart/form-data")
+          .form-group
+            %input(type="file" name="image[file]" id="file")
+          .form-group
+            %input(type="text" name="image[title]" class="form-control" placeholder="A beautiful image")
+          .form-group
+            %button(type="submit" class="btn btn-primary") Upload!
+      .modal-footer
+        %button(type="button" class="btn btn-default" data-dismiss="modal") Close
