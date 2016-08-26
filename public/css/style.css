@@ -42,3 +42,7 @@ body {
   color: #fff;
   background-color: #286090;
 }
+
+.modal-body {
+  padding-bottom: 0;
+}
