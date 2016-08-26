@@ -4,7 +4,7 @@
     %meta(charset="utf-8")
     %link(rel="stylesheet" href="/css/bootstrap.min.css")
     %link(rel="stylesheet" href="/css/style.css")
-    / Blueimp's Bootstrap Image Gallery.
+    / Blueimp's Bootstrap Image Gallery
     %link(rel="stylesheet" href="/css/blueimp-gallery.min.css")
     %link(rel="stylesheet" href="/css/bootstrap-image-gallery.min.css")
 
@@ -12,18 +12,17 @@
     .container
       = yield
 
-    / The Bootstrap Image Gallery lightbox,
-    / should be a child element of the document body.
+    / The Bootstrap Image Gallery lightbox
     #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
       .slides
-      / Controls for the borderless lightbox.
+      / Controls for the borderless lightbox
       %h3.title
       %a.prev ‹
       %a.next ›
       %a.close ×
       %a.play-pause
       %ol.indicator
-      / The modal dialog, which will be used to wrap the lightbox content.
+      / The modal dialog, which will be used to wrap the lightbox content
       .modal.fade
         .modal-dialog
           .modal-content
@@ -39,9 +38,13 @@
                 Next
                 %i.glyphicon.glyphicon-chevron-right
 
+    / jQuery
     %script(src="/js/jquery-3.1.0.min.js")
+    / jQuery code to make the modals work properly
+    %script(src="/js/images.js")
+    / Bootstrap
     %script(src="/js/bootstrap.min.js")
-    / Masonry.
+    / Masonry
     %script(src="/js/masonry.pkgd.min.js")
     %script(src="/js/imagesloaded.pkgd.min.js")
     :javascript
@@ -55,6 +58,6 @@
           });
         });
       });
-    / Blueimp's Bootstrap Image Gallery.
+    / Blueimp's Bootstrap Image Gallery
     %script(src="/js/jquery.blueimp-gallery.min.js")
     / %script(src="/js/bootstrap-image-gallery.min.js")

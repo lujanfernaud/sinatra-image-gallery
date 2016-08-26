@@ -34,16 +34,16 @@ class App < Sinatra::Base
     redirect "/"
   end
 
-  # Still not sure about keeping this feature or not.
-  get "/images/:id" do
-    @image = Image[params[:id]]
-    haml :show
-  end
+  # # Still not sure about keeping this feature or not.
+  # get "/images/:id" do
+  #   @image = Image[params[:id]]
+  #   haml :show
+  # end
 
-  # Upload images.
-  get "/upload" do
-    haml :upload
-  end
+  # # Upload images.
+  # get "/upload" do
+  #   haml :upload
+  # end
 
   # Save image to database.
   post "/images" do
@@ -55,11 +55,12 @@ class App < Sinatra::Base
     redirect "/"
   end
 
-  # Show edit template.
-  get "/images/:id/edit" do
-    @image = Image[params[:id]]
-    haml :edit
-  end
+  # # Show edit template.
+  # get "/images/:id/edit" do
+  #   @image = Image[params[:id]]
+  #   # Trigger modal here.
+  #   haml :edit
+  # end
 
   # Update image information in the database.
   post "/images/:id/edit" do
@@ -73,14 +74,14 @@ class App < Sinatra::Base
     redirect "/"
   end
 
-  # Delete confirmation.
-  get "/images/:id/delete-confirmation" do
-    @image = Image[params[:id]]
-    haml :delete_confirmation
-  end
+  # # Delete confirmation.
+  # get "/images/:id/delete-confirmation" do
+  #   @image = Image[params[:id]]
+  #   haml :delete_confirmation
+  # end
 
   # Delete image from database.
-  get "/images/:id/delete" do
+  post "/images/:id/delete" do
     @image = Image[params[:id]]
     @image.destroy
     redirect "/"

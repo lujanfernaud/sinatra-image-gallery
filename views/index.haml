@@ -17,20 +17,20 @@
             %a(href="#{image.file}" title="#{image.title}" data-gallery)
               %img{src: image.file.url(:small), class: "img-responsive"}
             - if loggedin?
-              %a{href: "/images/#{image.id}/edit", class: "btn edit-del-button"}
+              %button(type="button" class="btn edit-del-button" id="edit-button" data-toggle="modal" data-target="#modal-edit" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}" data-image-title="#{image.title}")
                 Edit
-              %a{href: "/images/#{image.id}/delete-confirmation", class: "btn edit-del-button"}             
+              %button(type="button" class="btn edit-del-button" id="delete-button" data-toggle="modal" data-target="#modal-delete" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}")
                 Delete
 
-/ Modal for Upload.
-%div(class="modal fade" id="modal-upload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel")
+/ Modal for Upload
+%div(class="modal fade" id="modal-upload" tabindex="-1" role="dialog" aria-labelledby="myModalUploadLabel")
   %div(class="modal-dialog modal-lg" role="document")
     .modal-content
-      %form(action="/images" method="post" enctype="multipart/form-data")
+      %form(action="/images" method="post" enctype="multipart/form-data" id="form-upload")
         .modal-header
           %button(type="button" class="close" data-dismiss="modal" aria-label="close")
             %span(aria-hidden="true") &times;
-          %h4(class="modal-title" id="myModalLabel") Upload New Image
+          %h4(class="modal-title" id="myModalUploadLabel") Upload New Image
         .modal-body
           .form-group
             %input(type="file" name="image[file]" id="file")
@@ -39,3 +39,39 @@
         .modal-footer
           %button(type="button" class="btn btn-default" data-dismiss="modal") Close
           %button(type="submit" class="btn btn-primary") Upload!
+
+/ Modal for Edit
+%div(class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="myModalEditLabel")
+  %div(class="modal-dialog modal-lg" role="document")
+    .modal-content
+      %form(action="/images/:id/edit" method="post" enctype="multipart/form-data" id="form-edit")
+        .modal-header
+          %button(type="button" class="close" data-dismiss="modal" aria-label="close")
+            %span(aria-hidden="true") &times;
+          %h4(class="modal-title" id="myModalEditLabel") Edit Image
+        .modal-body
+          .form-group
+            %img(src="image-file" id="modal-image" width="100%")
+          .form-group
+            %input(type="file" name="image-file" id="file")
+          .form-group
+            %input(type="text" name="image-title" class="form-control" id="form-input-text" placeholder="A nice placeholder")
+        .modal-footer
+          %button(type="button" class="btn btn-default" data-dismiss="modal") Close
+          %button(type="submit" class="btn btn-primary") Update!
+
+/ Modal for Delete
+%div(class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="myModalDeleteLabel")
+  %div(class="modal-dialog modal-lg" role="document")
+    .modal-content
+      %form(action="/images/:id/delete" method="post" enctype="multipart/form-data" id="form-delete")
+        .modal-header
+          %button(type="button" class="close" data-dismiss="modal" aria-label="close")
+            %span(aria-hidden="true") &times;
+          %h4(class="modal-title" id="myModalDeleteLabel") Delete Image?
+        .modal-body
+          .form-group
+            %img(src="image-file" id="modal-image" width="100%")
+        .modal-footer
+          %button(type="button" class="btn btn-default" data-dismiss="modal") Close
+          %button(type="submit" class="btn btn-primary") Yes, Delete
