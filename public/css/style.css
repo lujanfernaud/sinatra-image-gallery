@@ -37,6 +37,11 @@ p.wall {
   background-color: #FFFEFC;
 }
 
+p.wall-transparent {
+  margin-top: 6px;
+  margin-bottom: 2px;
+}
+
 .edit-del-button {
   width: 100%;
   height: 30px;
