@@ -38,7 +38,7 @@ body {
   border-radius: 4px;
 }
 
-.edit-del-button:hover {
+.edit-del-button:hover, .edit-del-button:focus {
   color: #fff;
   background-color: #286090;
 }
