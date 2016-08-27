@@ -10,4 +10,4 @@ A simple image gallery using Sinatra, Masonry, and Boostrap.
 - [ ] Vertically align modals
 - [ ] Center title in image gallery lightbox
 - [ ] Add 'go back to top' button on bottom right
-- [ ] Change background color
+- [x] Change background color
