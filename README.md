@@ -6,6 +6,7 @@ A simple image gallery using Sinatra, Masonry, and Boostrap.
 
 - [ ] Sort out overlapping images when resizing
 - [ ] Sort out typing cursor appearing on buttons
+- [ ] Sort out typing cursor appearing on modals
 - [x] Sort out edit and delete buttons text color changing after clicking
 - [ ] Vertically align modals
 - [ ] Center title in image gallery lightbox
