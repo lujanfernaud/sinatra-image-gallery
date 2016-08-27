@@ -16,6 +16,8 @@
           .margin-bottom-30
             %a(href="#{image.file}" title="#{image.title}" data-gallery)
               %img{src: image.file.url(:small), class: "img-responsive"}
+              - if show_image_title_in_wall?              
+                %p.wall= image.title
             - if loggedin?
               %button(type="button" class="btn edit-del-button" id="edit-button" data-toggle="modal" data-target="#modal-edit" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}" data-image-title="#{image.title}")
                 Edit

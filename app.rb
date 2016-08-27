@@ -8,6 +8,10 @@ class App < Sinatra::Base
     def loggedin?
       session[:loggedin]
     end
+
+    def show_image_title_in_wall?
+      true
+    end
   end
 
   ["/images/:id/delete-confirmation", "/images/:id/delete"].each do |route|
