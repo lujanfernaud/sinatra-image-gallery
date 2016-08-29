@@ -10,7 +10,7 @@ class App < Sinatra::Base
     end
 
     def show_image_title_in_wall?
-      true
+      false
     end
   end
 
