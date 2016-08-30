@@ -12,10 +12,6 @@ body {
   margin-bottom: 30px;
 }
 
-.margin-bottom-24 {
-  margin-bottom: 24px;
-}
-
 .margin-top-bottom {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -35,15 +31,10 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
-/*p.wall {
-  margin-bottom: 1px;
-  padding: 10px 8px 8px 8px;
-  background-color: #FFFFFF;
-}*/
-
 p.wall-transparent {
-  margin-top: 10px;
+  margin-top: 9px;
   margin-bottom: -5px;
+  /*text-align: center;*/
 }
 
 .buttons-container {
@@ -71,6 +62,8 @@ p.wall-transparent {
   color: #fff;
   background-color: #286090;
 }
+
+/* Fix extra space at the bottom of the modal body */
 
 .modal-body {
   padding-bottom: 0;
