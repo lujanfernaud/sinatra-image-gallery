@@ -8,14 +8,14 @@
       %button(type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-upload")
         Upload New Image
 
-.row
-  #links
-    %ul.grid.list-unstyled
-      - @images.each do |image|
-        %li.grid-item.col-md-4
-          .margin-bottom-30
+.row 
+  %ul.grid.list-unstyled
+    - @images.each do |image|
+      %li.grid-item.col-md-4
+        .margin-bottom-30
+          #links
             %a(href="#{image.file}" title="#{image.title}" data-gallery)
-              %img{src: image.file.url(:small), class: "img-responsive"}
+              %img{src: image.file.url(:small), alt: "#{image.title}", class: "img-responsive"}
               - if show_image_title_in_wall?              
                 %p.wall-transparent= image.title
             - if loggedin?

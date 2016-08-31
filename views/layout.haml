@@ -24,9 +24,9 @@
       %a.close ×
       %a.play-pause
       %ol.indicator
-      / The modal dialog, which will be used to wrap the lightbox content
+      / The modal dialog, currently not working
       .modal.fade
-        .modal-dialog
+        .modal-dialog.modal-lg
           .modal-content
             .modal-header
               %button(type="button" class="close" aria-hidden="true") &times;
@@ -62,5 +62,5 @@
       });
     / Blueimp's Bootstrap Image Gallery
     %script(src="/js/jquery.blueimp-gallery.min.js")
-    / This should be uncommented, but for some reason it doesn't work
+    / This should be uncommented, but for some reason the image doesn't appear
     / %script(src="/js/bootstrap-image-gallery.min.js")
