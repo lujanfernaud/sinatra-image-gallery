@@ -13,6 +13,7 @@
     - @images.each do |image|
       %li.grid-item.col-md-4
         .margin-bottom-30
+          / This ID is needed for Blueimp's Bootstrap Image Gallery
           #links
             %a(href="#{image.file}" title="#{image.title}" data-gallery)
               %img{src: image.file.url(:small), alt: "#{image.title}", class: "img-responsive"}
