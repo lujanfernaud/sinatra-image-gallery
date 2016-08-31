@@ -9,9 +9,9 @@
         Upload New Image
 
 .row 
-  %ul.grid.list-unstyled
+  %ul.list-unstyled.grid
     - @images.each do |image|
-      %li.grid-item.col-md-4
+      %li.col-md-4.grid-item
         .margin-bottom-30
           / This ID is needed for Blueimp's Bootstrap Image Gallery
           #links

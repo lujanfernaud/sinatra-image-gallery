@@ -29,6 +29,7 @@ a {
 a:hover, a:focus {
   color: #686857;
   text-decoration: none;
+  outline: none;
 }
 
 img:hover {
