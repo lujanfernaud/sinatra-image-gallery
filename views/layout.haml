@@ -47,16 +47,39 @@
     / Bootstrap
     %script(src="/js/bootstrap.min.js")
     / Masonry
-    %script(src="/js/masonry.pkgd.min.js")
-    %script(src="/js/imagesloaded.pkgd.min.js")
+    / %script(src="/js/masonry.pkgd.min.js")
+    / %script(src="/js/imagesloaded.pkgd.min.js")
+    / :javascript
+    /   $(document).ready(function() {
+    /     var $grid = $('.grid').imagesLoaded(function() {
+    /       // Init Masonry after all images have loaded.
+    /       $grid.masonry({
+    /         itemSelector:   '.grid-item',
+    /         columnWidth:    '.grid-item',
+    /         percentPosition: true
+    /       });
+    /     });
+    /   });
+    / Isotope
+    %script(src="/js/isotope.pkgd.min.js")
     :javascript
-      $(document).ready(function() {
-        var $grid = $('.grid').imagesLoaded(function() {
-          // Init Masonry after all images have loaded.
-          $grid.masonry({
-            itemSelector:   '.grid-item',
-            columnWidth:    '.grid-item',
-            percentPosition: true
+      $(window).on('load', function() {
+        var $grid = $('.grid');
+
+        $grid.isotope({
+          itemSelector: '.grid-item',
+          percentPosition: true,
+          masonry: {
+            columnWidth: '.col-md-4'
+          }
+        });
+
+        $(window).smartresize(function(){
+          $grid.isotope({
+            masonry: {
+              columnWidth: '.col-md-4',
+              rowHeight: '.col-md-4'
+            }
           });
         });
       });
