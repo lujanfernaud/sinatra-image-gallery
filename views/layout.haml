@@ -1,16 +1,32 @@
 !!!
 %html
+  /[if lt IE 7]
+    <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
+  /[if IE 7]
+    <html class="no-js lt-ie9 lt-ie8" lang="">
+  /[if IE 8]
+    <html class="no-js lt-ie9" lang="">
+  /[if gt IE 8]
+    <html class="no-js" lang="">
   %head
     %meta(charset="utf-8")
+    %meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    %title Simple Image Gallery
+    %meta(name="description" content="Simple Image Gallery")
+    %meta(name="viewport" content="width=device-width, initial-scale=1")
+
     / Bootstrap
     %link(rel="stylesheet" href="/css/bootstrap.min.css")
+    / Boilerplate
+    %link(rel="stylesheet" href="/css/main.css")
+    %script(src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js")
     / Blueimp's Bootstrap Image Gallery
     %link(rel="stylesheet" href="/css/blueimp-gallery.min.css")
     %link(rel="stylesheet" href="/css/bootstrap-image-gallery.min.css")
-    / My stylesheet
-    %link(rel="stylesheet" href="/css/style.css")
 
   %body
+    /[if lt IE 8]
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     .container
       = yield
 
@@ -41,9 +57,7 @@
                 %i.glyphicon.glyphicon-chevron-right
 
     / jQuery
-    %script(src="/js/vendor/jquery-3.1.0.min.js")
-    / jQuery code to make the modals work properly
-    %script(src="/js/images.js")
+    %script(src="/js/vendor/jquery-1.11.2.min.js")
     / Bootstrap
     %script(src="/js/vendor/bootstrap.min.js")
     / Masonry
@@ -78,3 +92,8 @@
     %script(src="/js/vendor/jquery.blueimp-gallery.min.js")
     / This should be uncommented, but for some reason the image doesn't appear
     / %script(src="/js/bootstrap-image-gallery.min.js")
+    / Boilerplate
+    :javascript
+      window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')
+    %script(src="/js/plugins.js")
+    %script(src="/js/main.js")
