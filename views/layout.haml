@@ -41,11 +41,11 @@
                 %i.glyphicon.glyphicon-chevron-right
 
     / jQuery
-    %script(src="/js/jquery-3.1.0.min.js")
+    %script(src="/js/vendor/jquery-3.1.0.min.js")
     / jQuery code to make the modals work properly
     %script(src="/js/images.js")
     / Bootstrap
-    %script(src="/js/bootstrap.min.js")
+    %script(src="/js/vendor/bootstrap.min.js")
     / Masonry
     / %script(src="/js/masonry.pkgd.min.js")
     / %script(src="/js/imagesloaded.pkgd.min.js")
@@ -61,7 +61,7 @@
     /     });
     /   });
     / Isotope
-    %script(src="/js/isotope.pkgd.min.js")
+    %script(src="/js/vendor/isotope.pkgd.min.js")
     :javascript
       $(window).on('load', function() {
         var $grid = $('.grid');
@@ -75,6 +75,6 @@
         });
       });
     / Blueimp's Bootstrap Image Gallery
-    %script(src="/js/jquery.blueimp-gallery.min.js")
+    %script(src="/js/vendor/jquery.blueimp-gallery.min.js")
     / This should be uncommented, but for some reason the image doesn't appear
     / %script(src="/js/bootstrap-image-gallery.min.js")
