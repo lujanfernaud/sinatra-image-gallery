@@ -38,7 +38,11 @@ a:hover, a:focus {
   outline: none;
 }
 
-img:hover {
+#links img {
+  transition: all 0.3s;
+}
+
+#links img:hover {
   opacity: 0.9;
 }
 
