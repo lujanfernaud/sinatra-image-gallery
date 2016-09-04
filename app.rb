@@ -9,6 +9,10 @@ class App < Sinatra::Base
       session[:loggedin]
     end
 
+    def show_image_title_in_thumb?
+      true
+    end
+
     def show_image_title_in_wall?
       false
     end
