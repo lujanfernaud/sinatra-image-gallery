@@ -40,29 +40,29 @@
       %a.close ×
       %a.play-pause
       %ol.indicator
-      / The modal dialog, currently not working
-      .modal.fade
-        .modal-dialog.modal-lg
-          .modal-content
-            .modal-header
-              %button(type="button" class="close" aria-hidden="true") &times;
-              %h4.modal-title
-            .modal-body.next
-            .modal-footer
-              %button(type="button" class="btn btn-default pull-left prev")
-                %i.glyphicon.glyphicon-chevron-left
-                Previous
-              %button(type="button" class="btn btn-primary next")
-                Next
-                %i.glyphicon.glyphicon-chevron-right
+      / The modal dialog, currently not using it
+      / .modal.fade
+      /   .modal-dialog.modal-lg
+      /     .modal-content
+      /       .modal-header
+      /         %button(type="button" class="close" aria-hidden="true") &times;
+      /         %h4.modal-title
+      /       .modal-body.next
+      /       .modal-footer
+      /         %button(type="button" class="btn btn-default pull-left prev")
+      /           %i.glyphicon.glyphicon-chevron-left
+      /           Previous
+      /         %button(type="button" class="btn btn-primary next")
+      /           Next
+      /           %i.glyphicon.glyphicon-chevron-right
 
     / jQuery
     %script(src="/js/vendor/jquery-1.11.2.min.js")
     / Bootstrap
     %script(src="/js/vendor/bootstrap.min.js")
     / Masonry
-    / %script(src="/js/masonry.pkgd.min.js")
-    / %script(src="/js/imagesloaded.pkgd.min.js")
+    / %script(src="/js/vendor/masonry.pkgd.min.js")
+    / %script(src="/js/vendor/imagesloaded.pkgd.min.js")
     / :javascript
     /   $(document).ready(function() {
     /     var $grid = $('.grid').imagesLoaded(function() {
