@@ -9,6 +9,4 @@ A simple image gallery using Sinatra, Masonry, and Boostrap.
 
 ## Things to add
 
-- Show image title in thumbnail hover
-- Center title in lightbox
 - Sharing buttons and an individual view for each image
