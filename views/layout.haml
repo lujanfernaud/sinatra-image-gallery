@@ -17,16 +17,17 @@
 
     / Bootstrap
     %link(rel="stylesheet" href="/css/bootstrap.min.css")
-    / Boilerplate
-    %link(rel="stylesheet" href="/css/main.css")
-    %script(src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js")
     / Blueimp's Bootstrap Image Gallery
     %link(rel="stylesheet" href="/css/blueimp-gallery.min.css")
     / %link(rel="stylesheet" href="/css/bootstrap-image-gallery.min.css")
+    / Boilerplate
+    %link(rel="stylesheet" href="/css/main.css")
+    %script(src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js")
 
   %body
     /[if lt IE 8]
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      
     .container
       = yield
 
@@ -58,6 +59,8 @@
 
     / jQuery
     %script(src="/js/vendor/jquery-1.11.2.min.js")
+    :javascript
+      window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')
     / Bootstrap
     %script(src="/js/vendor/bootstrap.min.js")
     / Masonry
@@ -92,7 +95,5 @@
     %script(src="/js/vendor/jquery.blueimp-gallery.min.js")
     / %script(src="/js/vendor/bootstrap-image-gallery.min.js")
     / Boilerplate
-    :javascript
-      window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')
     %script(src="/js/plugins.js")
     %script(src="/js/main.js")
