@@ -37,7 +37,7 @@ a:hover, a:focus {
   outline: none;
 }
 
-#links p.inside-thumbnail {
+#thumbnail p.inside-thumbnail {
   position: absolute;
   height: 20px;
   padding-left: 10px;
@@ -49,15 +49,15 @@ a:hover, a:focus {
   transition: all 0.5s;
 }
 
-#links:hover p.inside-thumbnail {
+#thumbnail:hover p.inside-thumbnail {
   opacity: 1;
 }
 
-#links img {
+#thumbnail img {
   transition: all 0.3s;
 }
 
-#links img:hover {
+#thumbnail img:hover {
   opacity: 0.3;
 }
 
