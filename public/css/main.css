@@ -48,24 +48,26 @@ a:hover, a:focus {
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 10px;
+  top: 0;
   color: #30302E;
   font-size: 16px;
   text-transform: uppercase;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: all 0.3s ease-out;
 }
 
 #thumbnail:hover p.inside-thumbnail {
   opacity: 1;
+  transform: translate3d(0, 10px, 0);
 }
 
 #thumbnail img {
-  transition: all 0.3s;
+  transition: all 0.3s ease-out;
 }
 
 #thumbnail img:hover {
-  opacity: 0.22;
+  opacity: 0.28;
+  filter: saturate(25%);
 }
 
 p.wall-transparent {
