@@ -37,16 +37,23 @@ a:hover, a:focus {
   outline: none;
 }
 
+#thumbnail {
+  text-align: center;
+}
+
 #thumbnail p.inside-thumbnail {
   position: absolute;
-  height: 20px;
-  padding-left: 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   top: 10px;
   color: #30302E;
   font-size: 16px;
   text-transform: uppercase;
   opacity: 0;
-  transition: all 0.5s;
+  transition: opacity 0.5s;
 }
 
 #thumbnail:hover p.inside-thumbnail {
@@ -149,5 +156,7 @@ p.wall-transparent {
 /* Blueimp's Image Gallery modifications */
 
 .blueimp-gallery > .title {
+  width: 100%;
+  text-align: center;
   text-transform: uppercase;
 }
