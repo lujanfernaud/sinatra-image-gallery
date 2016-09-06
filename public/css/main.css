@@ -53,17 +53,17 @@ figure {
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 7px;
+  top: 5px;
   color: #30302E;
   font-size: 18px;
-  /*text-transform: uppercase;*/
+  text-transform: uppercase;
   opacity: 0;
   transition: all 0.3s ease-out;
 }
 
 #thumbnail:hover h2.inside-thumbnail {
   opacity: 1;
-  transform: translate3d(0, 8px, 0);
+  transform: translate3d(0, 10px, 0);
 }
 
 #thumbnail img {
@@ -71,8 +71,8 @@ figure {
 }
 
 #thumbnail:hover img {
-  opacity: 0.28;
-  filter: saturate(18%);
+  opacity: 0.3;
+  filter: saturate(50%);
 }
 
 p.wall-transparent {
@@ -128,7 +128,7 @@ p.wall-transparent {
     vertical-align: middle;
     content: " ";
     height: 100%;
-    margin-right: -4px; /* Adjusts for spacing */
+    margin-right: -4px; /* Adjust spacing */
   }
 
   /* Make them appear from the center */
@@ -165,5 +165,5 @@ p.wall-transparent {
 .blueimp-gallery > .title {
   width: 100%;
   text-align: center;
-  /*text-transform: uppercase;*/
+  text-transform: uppercase;
 }
