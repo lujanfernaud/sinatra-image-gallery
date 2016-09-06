@@ -16,11 +16,13 @@
           / This ID is needed for Blueimp's Bootstrap Image Gallery
           #links
             %a(href="#{image.file}" title="#{image.title}" id="thumbnail" data-gallery)
-              %img{src: image.file.url(:small), alt: "#{image.title}", class: "img-responsive"}
-              - if show_image_title_in_thumb?
-                %p.inside-thumbnail= image.title
-              - if show_image_title_in_wall?              
-                %p.wall-transparent= image.title
+              %figure
+                %img{src: image.file.url(:small), alt: "#{image.title}", class: "img-responsive"}
+                %figcaption
+                  - if show_image_title_in_thumb?
+                    %h2.inside-thumbnail= image.title
+                  - if show_image_title_in_wall?              
+                    %p.wall-transparent= image.title
             - if loggedin?
               - if show_image_title_in_wall?
                 .buttons-container
