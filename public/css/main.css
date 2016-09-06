@@ -38,7 +38,7 @@ a:hover, a:focus {
 }
 
 figure {
-  background-color: #F8E3CE;
+  background-color: #0C0606;
 }
 
 #thumbnail {
@@ -48,13 +48,13 @@ figure {
 #thumbnail h2.inside-thumbnail {
   position: absolute;
   width: 85%;
-  margin-top: 1px;
+  margin-top: 4px;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   top: 5px;
-  color: #30302E;
+  color: #F8ECE0;
   font-size: 18px;
   text-transform: uppercase;
   opacity: 0;
@@ -67,6 +67,7 @@ figure {
 }
 
 #thumbnail img {
+  margin: 0 auto;
   transition: all 0.3s ease-out;
 }
 
@@ -76,9 +77,8 @@ figure {
 }
 
 p.wall-transparent {
-  margin-top: 9px;
+  margin-top: 8px;
   margin-bottom: -5px;
-  /*text-align: center;*/
 }
 
 .buttons-container {
