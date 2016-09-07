@@ -22,11 +22,6 @@ body {
   margin-bottom: 20px;
 }
 
-.upload-margin {
-  margin-top: 20px;
-  margin-bottom: 60px;
-}
-
 a {
   color: #30302E;
 }
@@ -38,7 +33,7 @@ a:hover, a:focus {
 }
 
 figure {
-  background-color: #0C0606;
+  background-color: #0C0404;
 }
 
 #thumbnail {
@@ -76,15 +71,6 @@ figure {
   filter: saturate(50%);
 }
 
-p.wall-transparent {
-  margin-top: 8px;
-  margin-bottom: -5px;
-}
-
-.buttons-container {
-  padding-top: 12px;
-}
-
 .edit-del-button {
   width: 100%;
   margin-top: 2px;
@@ -98,7 +84,7 @@ p.wall-transparent {
   background-color: #286090;
 }
 
-/* Adjust Boostrap columns gutter */
+/* Bootstrap: Adjust columns gutter */
 
 .row.gutter-20 {
   margin-left: -10px;
@@ -110,13 +96,13 @@ p.wall-transparent {
   padding-right: 10px;
 }
 
-/* Fix extra space at the bottom of the modal body */
+/* Bootstrap: Fix extra space at the bottom of the modal body */
 
 .modal-body {
   padding-bottom: 0;
 }
 
-/* Center the modals vertically */
+/* Bootstrap: Center the modals vertically */
 
 .modal {
   text-align: center;
@@ -128,7 +114,7 @@ p.wall-transparent {
     vertical-align: middle;
     content: " ";
     height: 100%;
-    margin-right: -4px; /* Adjust spacing */
+    margin-right: -4px; /* Adjust spacing to center them properly */
   }
 
   /* Make them appear from the center */

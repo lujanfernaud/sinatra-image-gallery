@@ -19,22 +19,12 @@
               %figure
                 %img{src: image.file.url(:small), alt: "#{image.title}", class: "img-responsive"}
                 %figcaption
-                  - if show_image_title_in_thumb?
-                    %h2.inside-thumbnail= image.title
-                  - if show_image_title_in_wall?              
-                    %p.wall-transparent= image.title
+                  %h2.inside-thumbnail= image.title
             - if loggedin?
-              - if show_image_title_in_wall?
-                .buttons-container
-                  %button(type="button" class="btn edit-del-button" id="edit-button" data-toggle="modal" data-target="#modal-edit" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}" data-image-title="#{image.title}")
-                    Edit
-                  %button(type="button" class="btn edit-del-button" id="delete-button" data-toggle="modal" data-target="#modal-delete" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}")
-                    Delete
-              - else
-                %button(type="button" class="btn edit-del-button" id="edit-button" data-toggle="modal" data-target="#modal-edit" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}" data-image-title="#{image.title}")
-                  Edit
-                %button(type="button" class="btn edit-del-button" id="delete-button" data-toggle="modal" data-target="#modal-delete" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}")
-                  Delete
+              %button(type="button" class="btn edit-del-button" id="edit-button" data-toggle="modal" data-target="#modal-edit" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}" data-image-title="#{image.title}")
+                Edit
+              %button(type="button" class="btn edit-del-button" id="delete-button" data-toggle="modal" data-target="#modal-delete" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}")
+                Delete
 
 / Modal for Upload
 %div(class="modal fade" id="modal-upload" tabindex="-1" role="dialog" aria-labelledby="myModalUploadLabel")
