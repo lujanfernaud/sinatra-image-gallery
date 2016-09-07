@@ -31,15 +31,16 @@
     .container
       = yield
 
-    / The Bootstrap Image Gallery lightbox
+    / Bootstrap Image Gallery lightbox
     #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
       .slides
       / Controls for the borderless lightbox
+      %button(class="btn btn-default share") Share
       %h3.title
       %a.prev ‹
       %a.next ›
       %a.close ×
-      %a.play-pause
+      / %a.play-pause
       %ol.indicator
       / The modal dialog, currently not using it
       / .modal.fade
