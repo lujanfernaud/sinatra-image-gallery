@@ -105,6 +105,7 @@ figure {
 /* Bootstrap: Center the modals vertically */
 
 .modal {
+  z-index: 9999999;
   text-align: center;
 }
 
@@ -160,14 +161,14 @@ figure {
   height: 80px;
   font-size: 120px;
   line-height: 60px;
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
 }
 
 .blueimp-gallery > .title {
   width: 60%;
-  top: 15px;
+  top: 18px;
   left: 0;
   right: 0;
   margin-left: auto;
@@ -205,4 +206,8 @@ figure {
   max-width: 100%;
   max-height: 87%;
   opacity: 1;
+}
+
+.blueimp-gallery {
+  background: #0C0404;
 }

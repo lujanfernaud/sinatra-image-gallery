@@ -15,7 +15,7 @@
         .margin-bottom-20
           / This ID is needed for Blueimp's Bootstrap Image Gallery
           #links
-            %a(href="#{image.file}" title="#{image.title}" id="thumbnail" data-gallery)
+            %a(href="#{image.file}" title="#{image.title}" id="thumbnail" data-image-id="#{image.id}" data-gallery)
               %figure
                 %img{src: image.file.url(:small), alt: "#{image.title}", class: "img-responsive"}
                 %figcaption
@@ -25,6 +25,48 @@
                 Edit
               %button(type="button" class="btn edit-del-button" id="delete-button" data-toggle="modal" data-target="#modal-delete" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}")
                 Delete
+
+/ Blueimp's Image Gallery lightbox
+#blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
+  .slides
+  / Controls for the borderless lightbox
+  %button(type="button" class="btn btn-default share" id="share-button" data-toggle="modal" data-target="#modal-share") Share
+  %h3.title
+  %a.prev ‹
+  %a.next ›
+  %a.close ×
+  / %a.play-pause
+  %ol.indicator
+  / The modal dialog, currently not using it
+  / .modal.fade
+  /   .modal-dialog.modal-lg
+  /     .modal-content
+  /       .modal-header
+  /         %button(type="button" class="close" aria-hidden="true") &times;
+  /         %h4.modal-title
+  /       .modal-body.next
+  /       .modal-footer
+  /         %button(type="button" class="btn btn-default pull-left prev")
+  /           %i.glyphicon.glyphicon-chevron-left
+  /           Previous
+  /         %button(type="button" class="btn btn-primary next")
+  /           Next
+  /           %i.glyphicon.glyphicon-chevron-right
+
+/ Modal for Share
+%div(class="modal fade" id="modal-share" tabindex="-1" role="dialog" aria-labelledby="myModalShareLabel")
+  %div(class="modal-dialog" role="document")
+    .modal-content
+      %form(action="/images/:id/edit" method="post" enctype="multipart/form-data" id="form-edit")
+        .modal-header
+          %button(type="button" class="close" data-dismiss="modal" aria-label="close")
+            %span(aria-hidden="true") &times;
+          %h4(class="modal-title" id="myModalShareLabel") Share Image
+        .modal-body
+          .form-group
+            %input(type="text" name="image-title" class="form-control" id="form-input-text")
+        .modal-footer
+          %button(type="button" class="btn btn-default" data-dismiss="modal") Close
 
 / Modal for Upload
 %div(class="modal fade" id="modal-upload" tabindex="-1" role="dialog" aria-labelledby="myModalUploadLabel")
