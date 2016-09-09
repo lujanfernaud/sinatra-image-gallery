@@ -34,6 +34,12 @@ class App < Sinatra::Base
     redirect "/"
   end
 
+  # Show individual image.
+  get "/images/:id" do
+    @image = Image[params[:id]]
+    haml :show_image
+  end
+
   # Save image to database.
   post "/images" do
     @image_params = params[:image]
