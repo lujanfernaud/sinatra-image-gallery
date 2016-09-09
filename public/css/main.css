@@ -51,7 +51,7 @@ figure {
   top: 5px;
   color: #F8ECE0;
   font-size: 18px;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   opacity: 0;
   transition: all 0.3s ease-out;
 }
@@ -152,7 +152,7 @@ figure {
 .blueimp-gallery > .title {
   width: 100%;
   text-align: center;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
 }
 
 .blueimp-gallery > .prev,
@@ -161,9 +161,11 @@ figure {
   height: 80px;
   font-size: 120px;
   line-height: 60px;
-  -webkit-border-radius: 4px;
+  background: none;
+  border: none;
+/*  -webkit-border-radius: 4px;
      -moz-border-radius: 4px;
-          border-radius: 4px;
+          border-radius: 4px;*/
 }
 
 .blueimp-gallery > .title {
@@ -180,12 +182,15 @@ figure {
   top: 15px;
   left: 15px;
   /*margin: 0 40px 0 0;*/
-  color: #000;
+  color: #FFF;
+  background: none;
   opacity: 0.8;
   /*display: none;*/
 }
 
 .blueimp-gallery > .share:hover {
+  color: #000;
+  background: #FFF;
   opacity: 1;
 }
 
