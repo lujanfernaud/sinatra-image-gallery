@@ -60,7 +60,8 @@
           %h4(class="modal-title" id="myModalShareLabel") Share Image
         .modal-body
           .form-group
-            %input(type="text" name="image-title" class="form-control" id="form-input-text")
+            / %input(type="text" name="image-url" class="form-control" id="form-input-text")
+            %input(type="text" name="image-url" class="form-control" id="form-input-text" onClick="this.setSelectionRange(0, this.value.length)")
         .modal-footer
           %button(type="button" class="btn btn-default" data-dismiss="modal") Close
 
