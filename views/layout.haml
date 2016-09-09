@@ -65,18 +65,11 @@
           }
         });
       });
-    / Blueimp's Bootstrap Image Gallery
+    / Blueimp's Image Gallery
     %script(src="/js/vendor/blueimp-gallery.js")
-    / :javascript
-    /   document.getElementById('links').onclick = function (event) {
-    /     event = event || window.event;
-    /     var target = event.target || event.srcElement,
-    /       link = target.src ? target.parentNode : target,
-    /       options = {index: link, event: event},
-    /       links = this.getElementsByTagName('a');
-    /     blueimp.Gallery(links, options);
-    /   };
-    %script(src="/js/vendor/jquery.blueimp-gallery.min.js")
+    / %script(src="/js/vendor/blueimp-helper.js")
+    %script(src="/js/vendor/blueimp-gallery-indicator.js")
+    %script(src="/js/vendor/jquery.blueimp-gallery.js")
     / %script(src="/js/vendor/bootstrap-image-gallery.min.js")
     / Boilerplate
     %script(src="/js/plugins.js")

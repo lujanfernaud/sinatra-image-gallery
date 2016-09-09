@@ -113,7 +113,7 @@
       // Toggle the controls on pressing the Return key:
       toggleControlsOnReturn: true,
       // Toggle the controls on slide click:
-      toggleControlsOnSlideClick: true,
+      toggleControlsOnSlideClick: false,
       // Toggle the automatic slideshow interval on pressing the Space key:
       toggleSlideshowOnSpace: true,
       // Navigate the gallery by pressing left and right on the keyboard:
@@ -930,6 +930,10 @@
       this.index = index
       this.handleSlide(index)
       this.setTimeout(this.options.onslide, [index, this.slides[index]])
+
+      // Get image-id and pass it to 'form-share' to be shown in the share modal:
+      var image_id = this.list[index].getAttribute('data-image-id');
+      document.forms['form-share'].elements['form-input-text'].value = 'https://localhost:9292/images/' + image_id;
     },
 
     setTitle: function (index) {
