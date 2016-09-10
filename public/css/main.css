@@ -179,8 +179,8 @@ figure {
 
 .blueimp-gallery > .close {
   padding: 2px 12px 6px 12px;
-  right: 15px;
-  left: auto;
+  left: 15px;
+  right: auto;
   margin: auto;
   font-size: 24px;
   line-height: 1;
@@ -203,8 +203,8 @@ figure {
 
 .blueimp-gallery > .btn-share {
   position: absolute;
-  top: 15px;
-  left: 15px;
+  top: 15px; 
+  right: 15px; 
   color: #FFF;
   background: none;
   opacity: 0.8;
@@ -237,4 +237,10 @@ figure {
 
 .blueimp-gallery {
   background: #0C0404;
+}
+
+.blueimp-gallery > .indicator > li {
+  width: 10px;
+  height: 10px;
+  border-radius: 4px;
 }
