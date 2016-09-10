@@ -6,7 +6,3 @@ A simple image gallery using Sinatra, Masonry, and Boostrap.
 
 - Sort out typing cursor appearing on buttons
 - Sort out typing cursor appearing on modals on screens smaller than 768px
-
-## Things to add
-
-- Sharing buttons and an individual view for each image
