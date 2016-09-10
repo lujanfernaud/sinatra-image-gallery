@@ -8,8 +8,12 @@
   .col-xs-12.text-center.margin-top-bottom
     %h2= @image.title
 
-.row
-  .col-xs-12.margin-top-bottom
+%nav(aria-label="...")
+  %ul.pager
+    %li
+      %a(href="/")
+        %span(aria-hidden="true") &larr;
+        Home
 
 / Blueimp's Image Gallery lightbox
 #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
