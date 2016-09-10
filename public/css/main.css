@@ -9,8 +9,8 @@ body {
 }
 
 .header-margin {
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
 
 .margin-bottom-20 {
@@ -205,7 +205,8 @@ figure {
   opacity: 1;
 }
 
-.blueimp-gallery > .btn-share {
+.blueimp-gallery > .btn-share,
+.blueimp-gallery > .btn-gallery {
   position: absolute;
   top: 15px; 
   right: 15px; 
@@ -214,13 +215,20 @@ figure {
   opacity: 0.8;
 }
 
-.blueimp-gallery > .btn-share:hover {
+.blueimp-gallery > .btn-gallery {
+  right: auto;
+  left: 65px; 
+}
+
+.blueimp-gallery > .btn-share:hover,
+.blueimp-gallery > .btn-gallery:hover {
   color: #000;
   background: #FFF;
   opacity: 1;
 }
 
-.blueimp-gallery-controls > .btn-share {
+.blueimp-gallery-controls > .btn-share,
+.blueimp-gallery-controls > .btn-gallery {
   display: block;
   /* Fix z-index issues (controls behind slide element) on Android: */
   -webkit-transform: translateZ(0);
