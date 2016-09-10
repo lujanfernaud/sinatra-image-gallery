@@ -71,6 +71,10 @@ figure {
   filter: saturate(50%);
 }
 
+#big-image {
+  cursor: zoom-in;
+}
+
 .edit-del-button {
   width: 100%;
   margin-top: 2px;

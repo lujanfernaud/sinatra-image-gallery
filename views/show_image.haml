@@ -1,6 +1,8 @@
 .row
   .col-xs-12
-    %img(src="#{@image.file}" alt="#{@image.title}" class="img-responsive")
+    #links
+      %a(href="#{@image.file}" title="#{@image.title}" id="big-image" data-image-id="#{@image.id}" data-gallery)
+        %img(src="#{@image.file}" alt="#{@image.title}" class="img-responsive")
 
 .row
   .col-xs-12.text-center.margin-top-bottom
@@ -8,3 +10,9 @@
 
 .row
   .col-xs-12.margin-top-bottom
+
+/ Blueimp's Image Gallery lightbox
+#blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
+  .slides
+  / Controls for the borderless lightbox
+  %a.close.btn.btn-default.btn-close ×
