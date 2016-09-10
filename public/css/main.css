@@ -177,24 +177,46 @@ figure {
   margin-right: auto;
 }
 
-.blueimp-gallery > .share {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  /*margin: 0 40px 0 0;*/
+.blueimp-gallery > .close {
+  padding: 2px 12px 6px 12px;
+  right: 15px;
+  left: auto;
+  margin: auto;
+  font-size: 24px;
+  line-height: 1;
+  text-shadow: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.blueimp-gallery > .btn-close {
   color: #FFF;
   background: none;
   opacity: 0.8;
-  /*display: none;*/
 }
 
-.blueimp-gallery > .share:hover {
+.blueimp-gallery > .btn-close:hover {
   color: #000;
   background: #FFF;
   opacity: 1;
 }
 
-.blueimp-gallery-controls > .share {
+.blueimp-gallery > .btn-share {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #FFF;
+  background: none;
+  opacity: 0.8;
+}
+
+.blueimp-gallery > .btn-share:hover {
+  color: #000;
+  background: #FFF;
+  opacity: 1;
+}
+
+.blueimp-gallery-controls > .btn-share {
   display: block;
   /* Fix z-index issues (controls behind slide element) on Android: */
   -webkit-transform: translateZ(0);
