@@ -933,7 +933,7 @@
 
       // Get image-id and pass it to 'form-share' to be shown in the share modal:
       var image_id = this.list[index].getAttribute('data-image-id');
-      document.forms['form-share'].elements['form-input-text'].value = 'localhost:9292/images/' + image_id;
+      document.forms['form-share'].elements['form-input-text'].value = document.location.host + '/images/' + image_id;
     },
 
     setTitle: function (index) {
