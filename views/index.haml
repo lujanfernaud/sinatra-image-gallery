@@ -17,9 +17,9 @@
                 %figcaption
                   %h2.inside-thumbnail= image.title
             - if loggedin?
-              %button(type="button" class="btn edit-del-button" id="edit-button" data-toggle="modal" data-target="#modal-edit" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}" data-image-title="#{image.title}")
+              %button(type="button" class="btn btn-primary btn-block btn-voffset" id="edit-button" data-toggle="modal" data-target="#modal-edit" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}" data-image-title="#{image.title}")
                 Edit
-              %button(type="button" class="btn edit-del-button" id="delete-button" data-toggle="modal" data-target="#modal-delete" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}")
+              %button(type="button" class="btn btn-primary btn-block" id="delete-button" data-toggle="modal" data-target="#modal-delete" data-image-id="#{image.id}" data-image-file="#{image.file.url(:small)}")
                 Delete
 
 / Blueimp's Image Gallery lightbox
@@ -103,7 +103,7 @@
             %input(type="text" name="image-title" class="form-control" id="form-input-text" placeholder="A nice placeholder")
         .modal-footer
           %button(type="button" class="btn btn-default" data-dismiss="modal") Close
-          %button(type="submit" class="btn btn-primary") Update!
+          %button(type="submit" class="btn btn-primary") Update
 
 / Modal for Delete
 %div(class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="myModalDeleteLabel")
@@ -119,4 +119,4 @@
             %img(src="#" id="modal-image" width="100%")
         .modal-footer
           %button(type="button" class="btn btn-default" data-dismiss="modal") Close
-          %button(type="submit" class="btn btn-primary") Yes, Delete
+          %button(type="submit" class="btn btn-primary") Delete
