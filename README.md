@@ -6,3 +6,6 @@ A simple image gallery using Sinatra, Masonry, and Boostrap.
 
 - Sort out typing cursor appearing on buttons
 - Sort out typing cursor appearing on modals on screens smaller than 768px
+
+- Center image in show_image.haml
+- Header title link spaning across the whole width
