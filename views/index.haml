@@ -24,7 +24,6 @@
 
 / Blueimp's Image Gallery lightbox
 #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
-  .slides
   / Controls for the borderless lightbox
   %button(type="button" class="btn btn-default btn-share" id="share-button" data-toggle="modal" data-target="#modal-share") Share
   %h3.title
@@ -32,6 +31,9 @@
   %a.next ›
   %a.close.btn.btn-default.btn-close ×
   / %a.play-pause
+  / Show slides
+  .slides
+  / Show indicator
   %ol.indicator
   / The modal dialog, currently not using it
   / .modal.fade
