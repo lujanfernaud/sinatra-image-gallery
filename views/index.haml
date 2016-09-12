@@ -63,6 +63,7 @@
         .modal-body
           .form-group
             / %input(type="text" name="image-url" class="form-control" id="form-input-text")
+            %label(for="form-input-text" class="sr-only") Image URL
             %input(type="text" name="image-url" class="form-control" id="form-input-text" onClick="this.setSelectionRange(0, this.value.length)")
         .modal-footer
           %button(type="button" class="btn btn-default" data-dismiss="modal") Close
@@ -78,9 +79,11 @@
           %h4(class="modal-title" id="myModalUploadLabel") Upload New Image
         .modal-body
           .form-group
+            %label(for="file" class="sr-only") Image File
             %input(type="file" name="image[file]" id="file")
           .form-group
-            %input(type="text" name="image[title]" class="form-control" placeholder="A beautiful image")
+            %label(for="image-title" class="sr-only") Image Title
+            %input(type="text" name="image[title]" class="form-control" id="image-title" placeholder="A beautiful image")
         .modal-footer
           %button(type="button" class="btn btn-default" data-dismiss="modal") Close
           %button(type="submit" class="btn btn-primary") Upload!
@@ -98,8 +101,10 @@
           .form-group
             %img(src="#" id="modal-image" width="100%")
           .form-group
+            %label(for="file" class="sr-only") Image File
             %input(type="file" name="image-file" id="file")
           .form-group
+            %label(for="form-input-text" class="sr-only") Image Title
             %input(type="text" name="image-title" class="form-control" id="form-input-text" placeholder="A nice placeholder")
         .modal-footer
           %button(type="button" class="btn btn-default" data-dismiss="modal") Close
