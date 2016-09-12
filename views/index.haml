@@ -9,7 +9,7 @@
     - @images.each do |image|
       %li.grid-item.col-md-4.col-sm-6.col-xs-12
         .margin-bottom-20
-          / This ID is needed for Blueimp's Bootstrap Image Gallery
+          / This ID is needed for Blueimp's Image Gallery
           #links
             %a(href="#{image.file}" title="#{image.title}" id="thumbnail" data-image-id="#{image.id}" data-gallery)
               %figure
@@ -30,26 +30,10 @@
   %a.prev ‹
   %a.next ›
   %a.close.btn.btn-default.btn-close ×
-  / %a.play-pause
   / Show slides
   .slides
   / Show indicator
   %ol.indicator
-  / The modal dialog, currently not using it
-  / .modal.fade
-  /   .modal-dialog.modal-lg
-  /     .modal-content
-  /       .modal-header
-  /         %button(type="button" class="close" aria-hidden="true") &times;
-  /         %h4.modal-title
-  /       .modal-body.next
-  /       .modal-footer
-  /         %button(type="button" class="btn btn-default pull-left prev")
-  /           %i.glyphicon.glyphicon-chevron-left
-  /           Previous
-  /         %button(type="button" class="btn btn-primary next")
-  /           Next
-  /           %i.glyphicon.glyphicon-chevron-right
 
 / Modal for Share
 %div(class="modal fade" id="modal-share" tabindex="-1" role="dialog" aria-labelledby="myModalShareLabel")
@@ -62,7 +46,6 @@
           %h4(class="modal-title" id="myModalShareLabel") Share Image
         .modal-body
           .form-group
-            / %input(type="text" name="image-url" class="form-control" id="form-input-text")
             %label(for="form-input-text" class="sr-only") Image URL
             %input(type="text" name="image-url" class="form-control" id="form-input-text" onClick="this.setSelectionRange(0, this.value.length)")
         .modal-footer

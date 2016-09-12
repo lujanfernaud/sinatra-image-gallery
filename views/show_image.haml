@@ -25,7 +25,6 @@
   %a(href="/" class="btn btn-default btn-gallery" id="gallery-button")
     %span(aria-hidden="true") &larr;
     Gallery
-  / %h3.title
   %a.close.btn.btn-default.btn-close ×
 
 / Modal for Share
@@ -39,7 +38,6 @@
           %h4(class="modal-title" id="myModalShareLabel") Share Image
         .modal-body
           .form-group
-            / %input(type="text" name="image-url" class="form-control" id="form-input-text")
             %label(for="form-input-text" class="sr-only") Image URL
             %input(type="text" name="image-url" class="form-control" id="form-input-text" onClick="this.setSelectionRange(0, this.value.length)")
         .modal-footer
