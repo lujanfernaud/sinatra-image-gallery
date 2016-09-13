@@ -21,11 +21,11 @@
 #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
   .slides
   / Controls for the borderless lightbox
-  %button(type="button" class="btn btn-default btn-share" id="share-button" data-toggle="modal" data-target="#modal-share") Share
+  %a.close.btn.btn-default.btn-close ×
   %a(href="/" class="btn btn-default btn-gallery" id="gallery-button")
     %span(aria-hidden="true") &larr;
     Gallery
-  %a.close.btn.btn-default.btn-close ×
+  %button(type="button" class="btn btn-default btn-share" id="share-button" data-toggle="modal" data-target="#modal-share") Share
 
 / Modal for Share
 %div(class="modal fade" id="modal-share" tabindex="-1" role="dialog" aria-labelledby="myModalShareLabel")
