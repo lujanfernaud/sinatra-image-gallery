@@ -19,13 +19,14 @@
 
 / Blueimp's Image Gallery lightbox
 #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
-  .slides
   / Controls for the borderless lightbox
   %a.close.btn.btn-default.btn-close ×
   %a(href="/" class="btn btn-default btn-gallery" id="gallery-button")
     %span(aria-hidden="true") &larr;
     Gallery
   %button(type="button" class="btn btn-default btn-share" id="share-button" data-toggle="modal" data-target="#modal-share") Share
+  / Show slides
+  .slides
 
 / Modal for Share
 %div(class="modal fade" id="modal-share" tabindex="-1" role="dialog" aria-labelledby="myModalShareLabel")
