@@ -10,7 +10,7 @@ class App < Sinatra::Base
     end
   end
 
-  ["/images/:id/delete-confirmation", "/images/:id/delete"].each do |route|
+  ["/images/:id/edit", "/images/:id/delete"].each do |route|
     before route do
       redirect "/" if !session[:loggedin]
     end
