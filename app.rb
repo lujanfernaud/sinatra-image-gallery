@@ -2,11 +2,16 @@ class App < Sinatra::Base
   configure do
     enable :sessions
     set :session_secret, "12345"
+    @@extension_error = false
   end
 
   helpers do
     def loggedin?
       session[:loggedin]
+    end
+
+    def extension_alert?
+      @@extension_error
     end
   end
 
@@ -20,6 +25,11 @@ class App < Sinatra::Base
   get "/" do
     @images = Image.all.reverse
     haml :index
+  end
+  
+  # We show the extension alert only once.
+  after "/" do
+    @@extension_error = false if @@extension_error
   end
 
   # Very simple and not safe login, for testing purposes.
@@ -46,6 +56,8 @@ class App < Sinatra::Base
     if @image_params["file"][:filename] =~ /^.*\.(jpg|JPG|png|PNG)$/
       @image = Image.new params[:image]
       @image.save
+    else
+      @@extension_error = true
     end
     redirect "/"
   end

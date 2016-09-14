@@ -4,6 +4,12 @@
       %button(type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-upload")
         Upload New Image
 
+- if extension_alert?
+  .row
+    .col-xs-12
+      %div(class="alert alert-danger" role="alert")
+        You can only upload images with the following extensions: .jpg .png
+
 .row.gutter-20
   %ul.grid.list-unstyled
     - @images.each do |image|
