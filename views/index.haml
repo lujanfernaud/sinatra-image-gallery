@@ -41,22 +41,6 @@
   / Show indicator
   %ol.indicator
 
-/ Modal for Share
-%div(class="modal fade" id="modal-share" tabindex="-1" role="dialog" aria-labelledby="myModalShareLabel")
-  %div(class="modal-dialog" role="document")
-    .modal-content
-      %form(id="form-share")
-        .modal-header
-          %button(type="button" class="close" data-dismiss="modal" aria-label="close")
-            %span(aria-hidden="true") &times;
-          %h4(class="modal-title" id="myModalShareLabel") Share Image
-        .modal-body
-          .form-group
-            %label(for="form-input-text" class="sr-only") Image URL
-            %input(type="text" name="image-url" class="form-control" id="form-input-text" onClick="this.setSelectionRange(0, this.value.length)")
-        .modal-footer
-          %button(type="button" class="btn btn-default" data-dismiss="modal") Close
-
 / Modal for Upload
 %div(class="modal fade" id="modal-upload" tabindex="-1" role="dialog" aria-labelledby="myModalUploadLabel")
   %div(class="modal-dialog modal-lg" role="document")
