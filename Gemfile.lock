@@ -37,7 +37,6 @@ GEM
     pry-byebug (3.4.0)
       byebug (~> 9.0)
       pry (~> 0.10)
-    puma (3.6.0)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -51,7 +50,6 @@ GEM
     sqlite3 (1.3.11)
     thread_safe (0.3.5)
     tilt (2.0.5)
-    time_ago_in_words (0.1.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
 
@@ -63,12 +61,10 @@ DEPENDENCIES
   carrierwave-sequel
   haml
   pry-byebug
-  puma
   rmagick
   sequel
   sinatra
   sqlite3
-  time_ago_in_words
 
 BUNDLED WITH
    1.12.5
