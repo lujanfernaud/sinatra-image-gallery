@@ -1,8 +1,7 @@
 - if loggedin?
-  .header-margin
-    .text-center
-      %button(type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-upload")
-        Upload New Image
+  .header-margin.text-center
+    %button(type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-upload")
+      Upload New Image
 
 - if extension_alert?
   .row
@@ -19,7 +18,7 @@
           #links
             %a(href="#{image.file}" title="#{image.title}" id="thumbnail" data-image-id="#{image.id}" data-gallery)
               %figure
-                %img{src: image.file.url(:small), alt: "#{image.title}", class: "img-responsive"}
+                %img(src="#{image.file.url(:small)}" alt="#{image.title}" class="img-responsive")
                 %figcaption
                   %h2.inside-thumbnail= image.title
             - if loggedin?
