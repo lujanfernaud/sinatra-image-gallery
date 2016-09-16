@@ -146,37 +146,36 @@ figure {
 /* Blueimp's Image Gallery modifications */
 
 .blueimp-gallery > .title {
-  width: 100%;
-  text-align: center;
-}
-
-.blueimp-gallery > .prev,
-.blueimp-gallery > .next {
-  width: 80px;
-  height: 80px;
-  font-size: 120px;
-  line-height: 60px;
-  background: none;
-  border: none;
-  z-index: 9999999;
-}
-
-.blueimp-gallery > .title {
   max-width: 65%;
   top: 18px;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  transition: all 0.2s ease;
+  z-index: 9999999;
+}
+
+.blueimp-gallery > .prev,
+.blueimp-gallery > .next {
+  width: 80px;
+  height: 80px;
+  font-size: 42px;
+  line-height: 60px;
+  background: none;
+  border: none;
+  transition: all 0.2s ease;
   z-index: 9999999;
 }
 
 .blueimp-gallery > .close {
-  padding: 2px 12px 6px 12px;
+  height: 34px;
+  padding: 9px 12px 6px 12px;
   left: 15px;
   right: auto;
   margin: auto;
-  font-size: 24px;
+  font-size: 12px;
   line-height: 1;
   text-shadow: none;
   text-decoration: none;
@@ -247,6 +246,7 @@ figure {
   width: 10px;
   height: 10px;
   border-radius: 4px;
+  transition: all 0.2s ease;
 }
 
 @media (max-width: 1900px) {

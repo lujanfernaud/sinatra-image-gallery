@@ -30,11 +30,14 @@
 / Blueimp's Image Gallery lightbox
 #blueimp-gallery.blueimp-gallery.blueimp-gallery-controls
   / Controls for the borderless lightbox
-  %a.close.btn.btn-default.btn-close ×
+  %a.close.btn.btn-default.btn-close
+    %span.glyphicon.glyphicon-remove
   %h3.title
   %button(type="button" class="btn btn-default btn-share" id="share-button" data-toggle="modal" data-target="#modal-share") Share
-  %a.prev ‹
-  %a.next ›
+  %a.prev
+    %span.glyphicon.glyphicon-chevron-left
+  %a.next
+    %span.glyphicon.glyphicon-chevron-right
   / Show slides
   .slides
   / Show indicator
