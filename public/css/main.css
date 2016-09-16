@@ -65,10 +65,6 @@ figure {
   filter: saturate(50%);
 }
 
-#big-image {
-  cursor: zoom-in;
-}
-
 .btn-voffset {
   margin-top: 2px;
 }
