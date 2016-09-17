@@ -96,6 +96,19 @@ figure {
   padding-bottom: 0;
 }
 
+/* Bootstrap: Add top border for .modal-body */
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Bootstrap: Set max height and width for image in modals */
+
+#modal-image {
+  max-height: 500px;
+  max-width: 100%;
+}
+
 /* Bootstrap: Center the modals vertically */
 
 .modal {
@@ -137,6 +150,14 @@ figure {
   display: inline-block;
   text-align: left;
   vertical-align: middle;
+}
+
+/* Bootstrap: Add a 700px width modal */
+
+@media (min-width: 800px) {
+  .modal-700 {
+    width: 700px;
+  }
 }
 
 /* Blueimp's Image Gallery modifications */
@@ -244,6 +265,8 @@ figure {
   border-radius: 4px;
   transition: all 0.2s ease;
 }
+
+/* Blueimp's IG: Resize image to always have space on top and bottom */
 
 @media (max-width: 1900px) {
   .blueimp-gallery > .slides > .slide > .slide-content {

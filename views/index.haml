@@ -45,7 +45,7 @@
 
 / Modal for Upload
 %div(class="modal fade" id="modal-upload" tabindex="-1" role="dialog" aria-labelledby="myModalUploadLabel")
-  %div(class="modal-dialog modal-lg" role="document")
+  %div(class="modal-dialog modal-700" role="document")
     .modal-content
       %form(action="/images" method="post" enctype="multipart/form-data" id="form-upload")
         .modal-header
@@ -65,7 +65,7 @@
 
 / Modal for Edit
 %div(class="modal fade" id="modal-edit" tabindex="-1" role="dialog" aria-labelledby="myModalEditLabel")
-  %div(class="modal-dialog modal-lg" role="document")
+  %div(class="modal-dialog modal-700" role="document")
     .modal-content
       %form(action="/images/:id/edit" method="post" enctype="multipart/form-data" id="form-edit")
         .modal-header
@@ -74,7 +74,8 @@
           %h4(class="modal-title" id="myModalEditLabel") Edit Image
         .modal-body
           .form-group
-            %img(src="#" id="modal-image" width="100%")
+            %img(src="#" id="modal-image" class="center-block")
+        .modal-body.border-top
           .form-group
             %label(for="file" class="sr-only") Image File
             %input(type="file" name="image-file" id="file")
@@ -87,7 +88,7 @@
 
 / Modal for Delete
 %div(class="modal fade" id="modal-delete" tabindex="-1" role="dialog" aria-labelledby="myModalDeleteLabel")
-  %div(class="modal-dialog modal-lg" role="document")
+  %div(class="modal-dialog modal-700" role="document")
     .modal-content
       %form(action="/images/:id/delete" method="post" enctype="multipart/form-data" id="form-delete")
         .modal-header
@@ -96,7 +97,7 @@
           %h4(class="modal-title" id="myModalDeleteLabel") Delete Image?
         .modal-body
           .form-group
-            %img(src="#" id="modal-image" width="100%")
+            %img(src="#" id="modal-image" class="center-block")
         .modal-footer
           %button(type="button" class="btn btn-default" data-dismiss="modal") Close
           %button(type="submit" class="btn btn-primary") Delete
