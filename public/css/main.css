@@ -113,7 +113,7 @@ figure {
   max-width: 100%;
 }
 
-/* Bootstrap: Change modal header and footer background color */
+/* Bootstrap: Modal backgrounds */
 
 .modal-header {
   background-color: #FAFAFA;
@@ -125,6 +125,17 @@ figure {
   background-color: #FAFAFA;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+.gray-background {
+  background-color: #FAFAFA;
+}
+
+/* Bootstrap: Fix modal backdrop not appearing */
+
+.modal-backdrop.in {
+  position: fixed;
+  height: 100%;
 }
 
 /* Bootstrap: Center the modals vertically */
