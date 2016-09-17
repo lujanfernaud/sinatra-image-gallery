@@ -2,7 +2,7 @@
   .col-xs-12
     #links
       %a(href="#{@image.file}" title="#{@image.title}" data-image-id="#{@image.id}" data-gallery)
-        %img(src="#{@image.file}" alt="#{@image.title}" class="img-responsive center-block")
+        %img(src="#{@image.file}" alt="#{@image.title}" id="image-big" class="img-responsive center-block")
 
 .row
   .col-xs-12.text-center.margin-top-bottom
