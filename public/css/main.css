@@ -90,10 +90,10 @@ figure {
   padding-right: 10px;
 }
 
-/* Bootstrap: Fix extra space at the bottom of the modal body */
+/* Bootstrap: Fix extra space at the bottom of .form-group */
 
-.modal-body {
-  padding-bottom: 0;
+.rm-margin-bottom {
+  margin-bottom: 0;
 }
 
 /* Bootstrap: Add top border for .modal-body */

@@ -56,7 +56,7 @@
           .form-group
             %label(for="file" class="sr-only") Image File
             %input(type="file" name="image[file]" id="file")
-          .form-group
+          .form-group.rm-margin-bottom
             %label(for="image-title" class="sr-only") Image Title
             %input(type="text" name="image[title]" class="form-control" id="image-title" placeholder="A beautiful image")
         .modal-footer
@@ -73,13 +73,13 @@
             %span(aria-hidden="true") &times;
           %h4(class="modal-title" id="myModalEditLabel") Edit Image
         .modal-body
-          .form-group
+          .form-group.rm-margin-bottom
             %img(src="#" id="modal-image" class="center-block")
         .modal-body.border-top
           .form-group
             %label(for="file" class="sr-only") Image File
             %input(type="file" name="image-file" id="file")
-          .form-group
+          .form-group.rm-margin-bottom
             %label(for="form-input-text" class="sr-only") Image Title
             %input(type="text" name="image-title" class="form-control" id="form-input-text" placeholder="A nice placeholder")
         .modal-footer
@@ -96,7 +96,7 @@
             %span(aria-hidden="true") &times;
           %h4(class="modal-title" id="myModalDeleteLabel") Delete Image?
         .modal-body
-          .form-group
+          .form-group.rm-margin-bottom
             %img(src="#" id="modal-image" class="center-block")
         .modal-footer
           %button(type="button" class="btn btn-default" data-dismiss="modal") Close
