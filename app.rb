@@ -27,7 +27,7 @@ class App < Sinatra::Base
     haml :index
   end
   
-  # We show the extension alert only once.
+  # Show the extension alert only once.
   after "/" do
     @@extension_error = false if @@extension_error
   end
@@ -79,5 +79,10 @@ class App < Sinatra::Base
     @image = Image[params[:id]]
     @image.destroy
     redirect "/"
+  end
+
+  # Catch every route that doesn't exists and show a custom Page Not Found.
+  not_found do
+    haml :not_found, :layout => false
   end
 end
